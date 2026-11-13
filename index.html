@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Nama Lengkap | Developer</title>
+  <meta name="description" content="Portofolio developer: proyek, keahlian, dan pengalaman kerja.">
+  <meta name="theme-color" content="#12060b">
+  <meta name="color-scheme" content="dark">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Nama Lengkap | Developer">
+  <meta property="og:description" content="Portofolio developer: proyek, keahlian, dan pengalaman kerja.">
+  <meta property="og:image" content="/assets/hero-default.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2312060b'/%3E%3Cpath d='M38 10 22 54' stroke='%23e0343f' stroke-width='7' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preload" href="/fonts/plus-jakarta-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/hero-default.webp" as="image" fetchpriority="high">
+  <link rel="stylesheet" href="/css/glass.css">
+  <link rel="stylesheet" href="/css/site.css">
+  <link rel="stylesheet" href="/css/motion.css">
+  <noscript><style>.hero__inner > *{animation:none!important}</style></noscript>
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Lewati ke konten</a>
+
+  <img class="page-bg" src="/assets/hero-default.webp" alt="" width="2400" height="1350" decoding="async" aria-hidden="true">
+
+  <header class="top">
+    <a class="brand glass is-pressable" href="#top" id="brand" aria-label="Kembali ke atas"><span class="brand__slash" aria-hidden="true">/</span><span id="brand-name"></span></a>
+
+    <nav class="nav" id="nav" aria-label="Navigasi utama">
+      <span class="nav__bg glass" data-refract data-bezel="14" aria-hidden="true"></span>
+      <span class="lens glass" id="lens" data-refract data-bezel="14" data-strength="1.15" aria-hidden="true"></span>
+    </nav>
+
+    <div class="top__right">
+      <div class="seg" role="group" aria-label="Bahasa" id="lang-seg">
+        <span class="seg__bg glass" data-refract data-bezel="12" aria-hidden="true"></span>
+        <span class="seg__thumb glass" data-refract data-bezel="12" data-strength="1.1" aria-hidden="true"></span>
+        <button type="button" data-lang="id" aria-pressed="true" lang="id">ID</button>
+        <button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
+      </div>
+      <a class="btn btn--sm glass is-pressable" id="top-cta" href="#kontak" data-refract data-bezel="12"></a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <img class="hero__img" src="/assets/hero-default.webp" alt="" width="2400" height="1350" fetchpriority="high" decoding="async">
+      <div class="hero__scrim" aria-hidden="true"></div>
+      <div class="hero__inner">
+        <h1 id="hero-title"></h1>
+        <p class="hero__tag" id="hero-tag"></p>
+        <div class="hero__actions">
+          <div class="pill" id="email-pill" hidden></div>
+          <a class="btn glass is-pressable" id="hero-cta" href="#proyek" data-refract data-bezel="16"></a>
+        </div>
+      </div>
+      <p class="hero__foot" id="hero-foot"></p>
+    </section>
+
+    <section class="sec sec--projects" id="proyek" aria-labelledby="proyek-title" hidden></section>
+    <section class="sec sec--about" id="tentang" aria-labelledby="tentang-title" hidden></section>
+    <section class="sec sec--exp" id="pengalaman" aria-labelledby="pengalaman-title" hidden></section>
+    <section class="sec sec--contact" id="kontak" aria-labelledby="kontak-title"></section>
+  </main>
+
+  <footer class="foot" id="foot"></footer>
+
+  <dialog class="sheet" id="sheet" aria-labelledby="sheet-title"></dialog>
+  <div class="toast glass" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <noscript><p class="noscript">Situs ini membutuhkan JavaScript untuk menampilkan isinya.</p></noscript>
+
+  <script type="application/json" id="seed-data">{"settings":{"siteTitle":{"id":"Nama Lengkap | Developer","en":"Full Name | Developer"},"siteDescription":{"id":"Portofolio developer: proyek, keahlian, dan pengalaman kerja.","en":"Developer portfolio: projects, skills and work experience."},"heroImage":null,"ogImage":null,"footnote":{"id":"Berbasis di Indonesia. Tersedia untuk proyek baru.","en":"Based in Indonesia. Available for new projects."},"social":[],"contactNote":{"id":"Ceritakan singkat kebutuhanmu. Pesan masuk ke kotak pesan admin dan dibalas lewat email.","en":"Tell me briefly what you need. Messages go to the admin inbox and get a reply by email."}},"profile":{"name":"Kavindra Maheswara","role":{"id":"Full-stack Developer","en":"Full-stack Developer"},"headline":{"id":"Saya membangun aplikasi web yang cepat dan mudah dipakai","en":"I build web apps that are fast and easy to use"},"tagline":{"id":"Dari rancangan sampai rilis: antarmuka, API, dan database dikerjakan satu tangan.","en":"From design to release: interface, API and database handled by one person."},"bio":{"id":"Tulis dua atau tiga paragraf tentang dirimu di sini: apa yang kamu kerjakan, jenis masalah yang kamu suka, dan cara kamu bekerja dengan tim atau klien.\n\nParagraf kedua bisa berisi hal di luar kode yang membentuk cara kerjamu.","en":"Write two or three paragraphs about yourself here: what you work on, the kind of problems you like, and how you work with teams or clients.\n\nThe second paragraph can cover what outside of code shapes the way you work."},"avatar":"/uploads/eb183a32bfc33ca213fc.jpg","location":"Indonesia","email":"maheswarakavindra04@gmail.com","resumeUrl":""},"projects":[{"id":"p-contoh-1","title":{"id":"Proyek contoh 1: Aplikasi kasir","en":"Sample project 1: Point-of-sale app"},"summary":{"id":"Satu atau dua kalimat tentang masalah yang diselesaikan proyek ini dan peran kamu di dalamnya.","en":"One or two sentences on the problem this project solves and your role in it."},"description":{"id":"Jelaskan latar belakang, keputusan teknis yang kamu ambil, dan hasilnya. Hanya cantumkan angka yang memang kamu ukur sendiri.","en":"Explain the background, the technical decisions you made and the result. Only include numbers you measured yourself."},"cover":null,"tags":["React","Node.js","PostgreSQL"],"category":"Web","demoUrl":"","repoUrl":"","year":"2025","featured":true,"visible":true},{"id":"p-contoh-2","title":{"id":"Proyek contoh 2: Dasbor laporan","en":"Sample project 2: Reporting dashboard"},"summary":{"id":"Ringkas apa yang dilihat pengguna dan keputusan apa yang terbantu oleh tampilan ini.","en":"Summarise what users see and which decisions the view helps them make."},"description":{"id":"Ganti teks ini dengan cerita proyekmu. Tambahkan tautan demo dan repositori kalau ada.","en":"Replace this text with your project story. Add demo and repository links if you have them."},"cover":null,"tags":["TypeScript","Chart.js"],"category":"Web","demoUrl":"","repoUrl":"","year":"2024","featured":false,"visible":true},{"id":"p-contoh-3","title":{"id":"Website Portofolio Berbasis Scroll Telling","en":"Scroll Telling Based Portfolio Website"},"summary":{"id":"Contoh proyek dengan kategori berbeda supaya filter kategori bisa dicoba.","en":"A sample project in a different category so the category filter can be tried."},"description":{"id":"Ganti atau hapus proyek contoh ini lewat panel admin.","en":"Replace or delete this sample project from the admin panel."},"cover":"/uploads/14ca871c5e4869c38ba2.png","tags":["Flutter","Firebase"],"category":"Mobile","demoUrl":"","repoUrl":"https://kevinmorant12.github.io/Portofolio-Yugioh12/","year":"2024","featured":false,"visible":true}],"skills":[{"id":"s-1","group":{"id":"Frontend","en":"Frontend"},"items":["HTML","CSS","JavaScript","TypeScript","React"]},{"id":"s-2","group":{"id":"Backend","en":"Backend"},"items":["Node.js","Express","PostgreSQL","REST API"]},{"id":"s-3","group":{"id":"Alat kerja","en":"Tooling"},"items":["Git","Docker","Figma","Linux"]},{"id":"s-485a933a","group":{"id":"Editor Video","en":"Editor Video"},"items":["Editor","Capcut","Design"]}],"experience":[{"id":"e-1","kind":"work","role":{"id":"Software Engineer","en":"Software Engineer"},"org":"Nama Perusahaan","from":"2023","to":"","current":true,"description":{"id":"Tulis tanggung jawab utama dan satu hasil nyata yang kamu kerjakan di sini.","en":"Write your main responsibilities and one real result you delivered here."},"visible":true},{"id":"e-2","kind":"education","role":{"id":"S1 Teknik Informatika","en":"Bachelor's in Computer Science"},"org":"Nama Universitas","from":"2019","to":"2023","current":false,"description":{"id":"","en":""},"visible":true}]}</script>
+  <script src="/js/glass.js" defer></script>
+  <script src="/js/site.js" defer></script>
+  <script src="/js/scroll.js" defer></script>
+</body>
+</html>

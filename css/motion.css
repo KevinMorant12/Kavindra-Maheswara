@@ -1,0 +1,44 @@
+/* Pendukung scroll-telling (scroll.js). Posisi dan opasitas diatur lewat properti translate, scale, dan opacity
+   dari JavaScript, tanpa transisi CSS, supaya gerakan mengikuti scroll tanpa jeda. Efek hover kartu yang memakai
+   `transform` tetap bekerja karena properti translate dan scale berdiri sendiri. */
+
+/* Animasi masuk hero cukup berjalan sekali. Setelah selesai, nilai akhirnya dipegang scroll.js, bukan fill-mode. */
+.hero .hero__img,
+.hero .hero__inner > *,
+.hero .hero__foot { animation-fill-mode: backwards; }
+
+/* Ember: titik bara kecil di belakang konten, di atas latar. Hanya bergerak saat scroll. */
+.fx-embers { position: fixed; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; }
+.fx-ember {
+  position: absolute; left: 0; top: 0; border-radius: 50%; will-change: transform, opacity; opacity: 0;
+  background: radial-gradient(circle, rgba(255, 170, 120, 0.95) 0%, rgba(255, 84, 58, 0.55) 42%, rgba(255, 60, 40, 0) 70%);
+}
+
+/* Bilah kemajuan di tepi atas: menunjukkan sejauh apa cerita sudah dibaca. */
+.fx-progress {
+  position: fixed; left: 0; right: 0; top: 0; height: 3px; z-index: 70; pointer-events: none;
+  transform-origin: 0 50%; scale: 0 1; background: linear-gradient(90deg, #e0343f, #ff9a6b);
+}
+
+/* Gambar di dalam bingkai dibuat sedikit lebih besar supaya bisa bergeser (parallax) tanpa menyisakan celah. */
+html.fx .card__media { overflow: hidden; }
+html.fx .card__media img,
+html.fx .card__media .ph { scale: 1.14; will-change: translate; }
+html.fx .about__photo img { scale: 1.18; will-change: translate; }
+
+/* Garis pemisah timeline digambar dari kiri sesuai posisi scroll (--d dari 0 ke 1). */
+html.fx .timeline > li { position: relative; border-top-color: transparent; }
+html.fx .timeline > li::before {
+  content: ''; position: absolute; left: 0; right: 0; top: -1px; height: 1px; background: var(--line);
+  transform-origin: 0 50%; scale: var(--d, 0) 1;
+}
+
+@media (max-width: 760px) {
+  html.fx .card__media img,
+  html.fx .card__media .ph { scale: 1.1; }
+  html.fx .about__photo img { scale: 1.12; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fx-embers, .fx-progress { display: none; }
+}
